@@ -54,4 +54,14 @@ public class SplurthElementValidatorTest {
 	public void isValidElementReturnsFalseIfSymbolSizeIsDifferentFromTwo() {
 		assertFalse(validator.isValidElement("stantzon", "Zno"));
 	}
+	
+	@Test 
+	public void isValidElementReturnsFalseIfSymbolIsNull() {
+		assertFalse(validator.isValidElement("stantzon", null));
+	}
+	
+	@Test 
+	public void isValidElementReturnsFalseIfNameIsNull() {
+		assertFalse(validator.isValidElement(null, "Zno"));
+	}
 }

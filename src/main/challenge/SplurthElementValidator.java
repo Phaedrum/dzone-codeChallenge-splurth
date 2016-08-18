@@ -6,7 +6,7 @@ public class SplurthElementValidator {
 	public static final int LETTERS_IN_SYMBOL = 2;
 
 	public boolean isValidElement(String name, String symbol) {
-		return isValidName(name) && isValidSymbol(symbol) && isValidNameForSymbol(name, symbol);
+		return (name == null || symbol == null) ? false : (isValidName(name) && isValidSymbol(symbol) && isValidNameForSymbol(name, symbol));
 	}
 
 	private boolean isValidName(String name) {
